@@ -24,7 +24,7 @@ const TaskModal = ({ visible, onClose, fetchTaskData }) => {
     setLoad(true);
     axios
       .post(
-        "https://voosh-assignment-4zan.onrender.com/task/add",
+        "https://task-management-application-v0f3.onrender.com/task/add",
         {
           ...values,
         },

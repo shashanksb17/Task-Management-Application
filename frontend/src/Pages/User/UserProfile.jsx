@@ -34,7 +34,7 @@ const UserProfile = () => {
     if (token) {
       try {
         setLoad(true)
-        const response = await axios.get("https://voosh-assignment-4zan.onrender.com/user/info", {
+        const response = await axios.get("https://task-management-application-v0f3.onrender.com/user/info", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -57,7 +57,7 @@ const UserProfile = () => {
     try {
       setLoad(true)
       const response = await axios.post(
-        "https://voosh-assignment-4zan.onrender.com/upload/avatar",
+        "https://task-management-application-v0f3.onrender.com/upload/avatar",
         formData
       );
       if (response) {
@@ -85,7 +85,7 @@ const UserProfile = () => {
     try {
       setLoad(true)
       const response = await axios.patch(
-        "https://voosh-assignment-4zan.onrender.com/user/update",
+        "https://task-management-application-v0f3.onrender.com/user/update",
         {userId: profile?._id ,firstName : values?.firstName, lastName : values?.lastName, email : values?.email}
       );
       if (response) {

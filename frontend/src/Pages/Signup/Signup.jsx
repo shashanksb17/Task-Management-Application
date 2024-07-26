@@ -25,7 +25,7 @@ export const Signup = () => {
     ) {
       return message.error("Password must have One uppercase, One number, and One Special Character")
     }
-    axios.post("https://voosh-assignment-4zan.onrender.com/user/register", values).then((res)=>{
+    axios.post("https://task-management-application-v0f3.onrender.com/user/register", values).then((res)=>{
       message.success("User Registered Successfully")
       navigate("/")
     })
@@ -44,7 +44,7 @@ export const Signup = () => {
       console.log(email, displayName, photoUrl, uid)
 
       const res = await axios.post(
-        "https://voosh-assignment-4zan.onrender.com/user/auth-google",
+        "https://task-management-application-v0f3.onrender.com/user/auth-google",
         {
           googleId: uid,
           firstName,
@@ -129,7 +129,7 @@ export const Signup = () => {
           Already have an account? <a style={{ cursor: "pointer" }} onClick={() => navigate("/")}>Login</a>
         </div>
         <Button type="default" icon={<GoogleOutlined />} block onClick={handleGoogleLogin}>
-          Signup with Google
+           Google
         </Button>
       </div>
     </div>

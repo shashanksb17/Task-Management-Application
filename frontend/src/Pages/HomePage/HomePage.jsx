@@ -25,7 +25,7 @@ const HomePage = () => {
     if (token) {
       try {
         setLoad(true);
-        const response = await axios.get("https://voosh-assignment-4zan.onrender.com/user/info", {
+        const response = await axios.get("https://task-management-application-v0f3.onrender.com/user/info", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -48,7 +48,7 @@ const HomePage = () => {
     if (isCompleted !== undefined) params.is_completed = isCompleted;
     setLoad(true);
     axios
-      .get("https://voosh-assignment-4zan.onrender.com/task/all", {
+      .get("https://task-management-application-v0f3.onrender.com/task/all", {
         params,
         headers: {
           Authorization: `Bearer ${token}`,
